@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.checked = todo.status;
+            checkbox.disabled = todo.edit;
             checkbox.addEventListener('change', () => {
                 todo.toggleStatus();
                 renderToDos();
